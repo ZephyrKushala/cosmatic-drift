@@ -146,6 +146,7 @@
       - id: HandLabeler
       #CD Addions
       - id: BoxFolderDetectiveClipboard
+      - id: BoxTapeRecorder
       - id: BookSOPSecurity
         prob: 0.2
 
@@ -158,11 +159,8 @@
     contents:
       - id: ClothingHeadHelmetBombSuit
       - id: ClothingOuterSuitBomb
-      # NT is cheap, what can you do...
       - id: Wirecutter
-        prob: 0.9
       - id: Screwdriver
-        prob: 0.9
       - id: Multitool
         prob: 0.5
 
@@ -221,7 +219,7 @@
     contents:
     - id: WeaponShotgunEnforcer
       amount: 2
-    - id: MagazineShotgun
+    - id: BoxLethalshot
       amount: 4
 
 - type: entity
@@ -233,8 +231,8 @@
     contents:
     - id: WeaponShotgunKammerer
       amount: 2
-    - id: MagazineShotgun
-      amount: 4
+    - id: BoxLethalshot
+      amount: 2
 
 - type: entity
   id: GunSafeSubMachineGunWt550
@@ -250,7 +248,7 @@
       amount: 4
 
 - type: entity
-  parent: GunSafeBaseSecure
+  parent: [GunSafeBaseSecure, BaseRestrictedContraband]
   id: GunSafeLaserCarbine
   name: laser safe
   components:
